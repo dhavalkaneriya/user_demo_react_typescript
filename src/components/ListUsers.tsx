@@ -26,9 +26,9 @@ const ListUsers: React.FC<IProps> = (props: IProps) => {
         <p>List of users</p>
         {props.users.map((user: string, id: number) => {
           return (
-            <button key={id} onClick={() => deleteName(user, id)}>
+            <Button variant="success" key={id} onClick={() => deleteName(user, id)}>
               {user}
-            </button>
+            </Button>
           );
         })}
       </div>
@@ -37,8 +37,9 @@ const ListUsers: React.FC<IProps> = (props: IProps) => {
           Click Me to select random user
         </Button>
         <br />
+        <br />
 
-        {props.randomUser && <button>{props.randomUser}</button>}
+        {props.randomUser && <Button variant="info">{props.randomUser}</Button>}
       </div>
     </div>
   );

@@ -25,15 +25,21 @@ const UserInput: React.FC = () => {
     }
   };
 
+  const onFormSubmit = (e: any) => {
+    e.preventDefault();
+    submitForm()
+  }
+
   return (
     <React.Fragment>
-      <Form>
+      <Form onSubmit={(e: any) => onFormSubmit(e)}>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>User Name</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter user name"
+              className="input_field"
               value={user && user.Name}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 let value = e.target.value;
