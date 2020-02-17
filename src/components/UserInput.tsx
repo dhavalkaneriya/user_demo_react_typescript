@@ -47,22 +47,6 @@ const UserInput: React.FC = () => {
               }}
             />
           </Form.Group>
-
-          {/* <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>Last Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter last name"
-              value={user && user.lastName}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                let value = e.target.value;
-                setUser((prevState: any) => ({
-                  ...prevState,
-                  lastName: value
-                }));
-              }}
-            />
-          </Form.Group> */}
         </Form.Row>
 
         {error && <Alert variant="danger">{error}</Alert>}
